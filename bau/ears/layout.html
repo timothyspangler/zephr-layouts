@@ -1,4 +1,5 @@
 <style type="text/css">
+  /* this entire `style` tag seems to be getting stripped */
   a.ear {
     background:url({{image-url}}) center no-repeat;
     background-size:100%;
@@ -10,4 +11,8 @@
   }
 </style>
 
-<a class="ear" href="{{subscribe-url}}">{{ada-content}}</a>
+<a class="ear" href="{{subscribe-url}}" data-version="1">{{ada-content}}</a>
+
+<script type="text/javascript">
+  console.log('>>>> script tags seem to be stripped as well');
+</script>
