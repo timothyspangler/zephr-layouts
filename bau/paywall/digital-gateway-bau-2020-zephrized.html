@@ -1,0 +1,74 @@
+<div class="meter-modal" data-variation="{{variation}}" data-market="{{domain}}" style="width: 718px; margin: 0 auto; box-shadow: 0 0 20px #666; font-family: 'Lato', Arial, Helvetica, sans-serif;">
+  <div class="pw-row da-head" style="display: block; padding: 10px 22px; margin: 0 auto; background: #39a0c5; text-align: left;">
+    <div class="pw-text" style="display: inline-block;">
+      <span class="da-progress" data-break="{{progress-break}}" style="font-size: 12.5px; text-transform: uppercase; color: #ffffff; font-weight: bold; line-height: {{progress-desktop-line-height}};">{{progress}}</span>
+    </div>
+    <div class="da-login-link" style="float: right; display: inline-block;">
+      <a class="pw-btn small" data-reg-handler="signInHandler" href="#" style="display: inline-block; font-weight: 700; text-align: center; text-decoration: none; text-transform: uppercase; border-radius: 100px; font-size: 12.5px; padding: 10px 0; color: #39a0c5; background: #f1f1f1; min-width: 168px;">Subscriber Login</a>
+    </div>
+    <div class="da-logout-link" style="float: right; visibility: hidden; display: inline-block;">
+      <a class="pw-btn small" data-reg-handler="logoutin" href="#" style="display: inline-block; font-weight: 700; text-align: center; text-decoration: none; text-transform: uppercase; border-radius: 100px; font-size: 12.5px; padding: 10px 0; color: #39a0c5; background: #f1f1f1; min-width: 168px;">Log Out</a>
+    </div>
+  </div>
+  <div class="da-body" style="display: block; background-color: #fff; background-position: center top; background-repeat: no-repeat; background-size: cover; text-align: center; color: #fff; padding: 15px 0px 0px; clear: both; height: auto;">
+    <h2 data-break="{{tagline-break}}" style="letter-spacing: normal; font-size: 24px; font-weight: bold; color: {{tagline-color}}; margin: 25px 0px 0px 0px;">{{tagline}}</h2>
+    <div class="da-offer" style="display: inline-block; width: 535px; text-align: center; margin: 40px auto 40px;">
+      <div class="da-image pull-left" style="float: left;">
+        <img class="da-device-image" src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/device-uda.png" alt style="width: 163px;">
+        <p style="color: #666; font-size: 17px; font-weight: 900; margin: 8px 0 0;">{{uda-caption}}</p>
+      </div>
+      <div class="da-details pull-right" style="float: right;">
+        <h3 style="color: #004e87; font-size: 20px; text-transform: uppercase; font-weight: 900; letter-spacing: normal; margin: 10px 0 10px;"><span style="color: {{offer-color}}; font-size: 17px; text-transform: uppercase; font-weight: 900;">{{offer}}</span></h3>
+        <div class="da-cta-div " style="margin: 0 0 8px;">
+          <a class="da-digital-button pw-btn lrg" href="{{subscribeUrl}}" data-met-return style="background: #004e87; padding: 15px 0; display: inline-block; font-weight: 700; font-size: 14px; color: #ffffff; text-align: center; text-decoration: none; text-transform: uppercase; border-radius: 100px; min-width: 255px;">{{cta}}</a>
+        </div>
+        <span class="fine-print" style="text-transform: uppercase; color: #111; font-weight: 900; font-size: 12px;">{{fine-print}}</span>
+      </div>
+    </div>
+    <div class="toggle" style="display:none;">
+      <p>See what's included</p>
+      <img src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/arrow.svg" alt>
+    </div>
+    <div class="access-list" style="display: block; clear: both;">
+      <span style="font-size: 12.5px; text-transform: uppercase; color: #666; width: 100%; display: block;">{{bubble-header}}</span>
+      <div class="da-bubble-1" style="display: inline-block; margin: 20px 18px 24px;">
+        <img class="da-device-image" src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/icon-{{bubble-one-image}}.png" alt style="width: 65px; height: 65px; border: 0;" width="65" height="65">
+        <p style="font-size: 11px; line-height: 13px; text-transform: uppercase; margin: 2px 0 0; color: #111;">{{bubble-one}}</p>
+      </div>
+      <div class="da-bubble-2" style="display: inline-block; margin: 20px 18px 24px;">
+        <img class="da-device-image" src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/icon-{{bubble-two-image}}.png" alt style="width: 65px; height: 65px; border: 0;" width="65" height="65">
+        <p style="font-size: 11px; line-height: 13px; text-transform: uppercase; margin: 2px 0 0; color: #111;">{{bubble-two}}</p>
+      </div>
+      <div class="da-bubble-3" style="display: inline-block; margin: 20px 18px 24px;">
+        <img class="da-device-image" src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/icon-{{bubble-three-image}}.png" alt style="width: 65px; height: 65px; border: 0;" width="65" height="65">
+        <p style="font-size: 11px; line-height: 13px; text-transform: uppercase; margin: 2px 0 0; color: #111;">{{bubble-three}}</p>
+      </div>
+      <div class="da-bubble-4" style="display: inline-block; margin: 20px 18px 24px; margin-left: 10px;">
+        <img class="da-device-image" src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/icon-{{bubble-four-image}}.png" alt style="width: 65px; height: 65px; border: 0;" width="65" height="65">
+        <p style="font-size: 11px; line-height: 13px; text-transform: uppercase; margin: 2px 0 0; color: #111;">{{bubble-four}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="pw-row da-footer da-print" style="padding: 10px 22px; margin: 0 auto; text-align: left; display: {{show-print}}; background: #dfdfe0;">
+    <div class="pw-text bottom" style="display: inline-block;">
+      <span data-break="{{print-delivery-break}}" style="font-size: 12.5px; text-transform: uppercase; line-height: 35px; font-weight: bold; color: #39a0c5;">{{print-delivery-text}}</span>
+    </div>
+    <div class="da-print-link" style="float: right; display: inline-block;">
+      <a href="{{print-delivery-url}}" target="_blank" class="pw-btn small print-link" style="display: inline-block; font-weight: 700; text-align: center; text-decoration: none; text-transform: uppercase; border-radius: 100px; font-size: 12.5px; padding: 10px 0; color: #39a0c5; background: #f1f1f1; min-width: 168px;">{{print-delivery-cta}}</a>
+    </div>
+  </div>
+  <div class="da-legal" style="background: #004e87; text-align: center; color: #fff; font-size: 11px; padding: 18px 0;">
+    <a class="reg-cancel abandon" href="https://www.{{domain}}.com" style="display: inline-block; color: #fff; text-decoration: none; margin: 0 3px;">{{abandon}}</a> | <a href="https://www.tribpub.com/central-terms-of-service/" target="_blank" style="display: inline-block; color: #fff; text-decoration: none; margin: 0 3px;">Terms of Service</a> | <a href="https://www.tribpub.com/privacy-policy/" target="_blank" style="display: inline-block; color: #fff; text-decoration: none; margin: 0 3px;">Privacy Policy</a>
+  </div>
+</div>
+<script>
+((window.trb || (trb = {})).metering || (trb.metering = {})).push(function(reg) {
+  var break_code = '<br class="m_show" style="display:none;">';
+  document.querySelectorAll('.meter-modal [data-break]').forEach(function(elem) {
+    //  insert `break_code` after `data-break`
+    var b = elem.getAttribute('data-break');
+    if(b != '')
+      elem.innerHTML = elem.innerHTML.replace(new RegExp(b, 'ig'), b + break_code);
+  });
+});
+</script>
