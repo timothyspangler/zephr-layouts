@@ -13,6 +13,16 @@
   contain: strict;
 }
 
+#reg-overlay:after {
+  content: "";
+  height: 100%;
+}
+
+#reg-overlay:after, .reg-dialog {
+  display: inline-block;
+  vertical-align: middle;  
+}
+
 #reg-overlay, .panel .reg-explain, .panel .reg-register, .panel .reg-sso, .panel .reg-tos {
   text-align:center;
 }
