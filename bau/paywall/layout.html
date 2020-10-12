@@ -38,9 +38,9 @@
 }
 
 .meter-modal mark {
-  background-color: {{highlight_bg_color}};
+  background-color: {{highlight-background-color}};
   text-decoration: line-through;
-  color: {{highlight_color}};
+  color: {{highlight-color}};
 }
 
 .reg-cancel,
@@ -122,7 +122,7 @@
 }
 
 .da-details h3 {  /* offer text */
-  color: {{offer_color}};
+  color: {{offer-color}};
   font-size: 20px;
   font-weight: 900;
   margin: 14px 0 10px;
@@ -130,11 +130,11 @@
 }
 
 .da-details h3 s {
-  color: {{strikethrough_color}};
+  color: {{strikethrough-color}};
 }
 
 .fine-print {
-  color: {{fine_print_color}};
+  color: {{fine-print-color}};
   font-weight: 900;
   font-size: 12px;
 }
@@ -149,7 +149,7 @@
 }
 
 .access-list span { /* text above bubbles */
-  color: {{bubble_header_color}};
+  color: {{bubble-header-color}};
   width: 100%;
   display: block;
 
@@ -175,17 +175,17 @@
   line-height: 13px;
   text-transform: uppercase;
   margin: 2px 0 0;
-  color: {{bubble_text_color}};
+  color: {{bubble-text-color}};
 }
 
 
 .da-digital-button {
-  color: {{cta_text_color}};
-  background-color: {{cta_bg_color}};
+  color: {{cta-text-color}};
+  background-color: {{cta-background-color}};
 }
 
 .da-head {
-  background-color: {{header_bg_color}};
+  background-color: {{header-background-color}};
 }
 
 .pw-btn {
@@ -207,13 +207,13 @@
 .pw-btn.small {
   font-size: 12.5px;
   padding: 10px 0;
-  color: {{button_text_color}};
-  background-color: {{button_bg_color}};
+  color: {{button-text-color}};
+  background-color: {{button-background-color}};
   min-width: 168px;
 }
 
 .pw-btn.small.print-link {
-  color:{{print_button_text_color}};
+  color:{{print-button-text-color}};
 }
 
 .pw-row>div {
@@ -222,20 +222,20 @@
 
 .pw-row span {
   line-height:35px;
-  color: {{header_text_color}};
+  color: {{header-text-color}};
   font-weight: bold;
 }
 
 .da-progress {
-  line-height: {{progress_desktop_line_height} !important;
+  line-height: {{progress-line-height-desktop} !important;
 }
 
 .pw-text.bottom span { /* print text */
-  color: {{print_text_color}};
+  color: {{print-text-color}};
 }
 
 .pw-row.da-footer { /* print footer */
-  background-color: {{print_bg_color}};
+  background-color: {{print-background-color}};
 }
 
 .da-login-link, .da-logout-link, .da-print-link {
@@ -246,12 +246,12 @@
   font-size: 26px;
   letter-spacing:-0.5px;
   font-weight: bold;
-  color: {{tagline_color}};
+  color: {{tagline-color}};
   margin: 14px 0px 10px 0px;
 }
 
 .da-urgency { /* urgency */
-  color: {{urgency_color}};
+  color: {{urgency-color}};
   font-size: 12px;
   font-weight: 900;
   margin:0;
@@ -261,16 +261,16 @@
 }
 
 .da-legal {
-  background-color: {{footer_bg_color}};
+  background-color: {{footer-background-color}};
   text-align: center;
-  color: {{footer_text_color}};
+  color: {{footer-text-color}};
   font-size: 11px;
   padding: 18px 0;
 }
 
 .da-legal a {
   display: inline-block;
-  color: {{footer_text_color}};
+  color: {{footer-text-color}};
   text-decoration: none;
   margin: 0 3px;
 }
@@ -316,7 +316,7 @@ screen and (max-width: 480px) {
   }
 
   .da-progress {
-    line-height: {{progress_mobile_line_height}} !important;
+    line-height: {{progress-line-height-mobile}} !important;
   }
 
   .da-body h2 {
@@ -385,7 +385,7 @@ screen and (max-width: 360px) {
   }
 
   .da-progress {
-    line-height: {{progress_tiny_line_height}} !important;
+    line-height: {{progress-line-height-tiny}} !important;
   }
 
   .pw-btn.small {
@@ -403,7 +403,7 @@ screen and (max-width: 360px) {
   <div class="reg-dialog meter-modal" data-market="{{market-domain}}">
     <div class="pw-row da-head">
       <div class="pw-text">
-        <span class="da-progress" data-break="{{progress_break}}">{{progress-text}}</span>
+        <span class="da-progress" data-break="{{progress-line-break}}">{{progress-text}}</span>
       </div>
       <div class="da-login-link">
         <a class="pw-btn small" data-reg-handler="signInHandler" href="#">Subscriber Login</a>
@@ -413,11 +413,11 @@ screen and (max-width: 360px) {
       </div>
     </div>
     <div class="da-body">
-      <h2 data-break="{{tagline_break}}">{{tagline}}</h2>
+      <h2 data-break="{{tagline-break}}">{{tagline}}</h2>
       <h4 class="da-urgency">{{urgency}}</h4>
       <div class="da-offer">
         <div class="da-image pull-left">
-          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/device-uda.{{image_ext}}" alt="" style="width: 163px;">
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/device-uda.{{image-extension}}" alt="" style="width: 163px;">
           <p>{{uda-caption}}</p>
         </div>
         <div class="da-details pull-right">
@@ -433,31 +433,31 @@ screen and (max-width: 360px) {
         <img src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/arrow.svg" alt="">
       </div>
       <div class="access-list">
-        <span>{{bubble_header}}</span>
+        <span>{{bubble-header}}</span>
         <div class="da-bubble-1">
-          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble_one_image}}.{{bubble_image_ext}}" alt="">
-          <p>{{bubble_one}}</p>
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble-one-image}}.{{bubble-image-extension}}" alt="">
+          <p>{{bubble-one-text}}</p>
         </div>
         <div class="da-bubble-2">
-          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble_two_image}}.{{bubble_image_ext}}" alt="">
-          <p>{{bubble_two}}</p>
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble-two-image}}.{{bubble-image-extension}}" alt="">
+          <p>{{bubble-two-text}}</p>
         </div>
         <div class="da-bubble-3">
-          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble_three_image}}.{{bubble_image_ext}}" alt="">
-          <p>{{bubble_three}}</p>
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble-three-image}}.{{bubble-image-extension}}" alt="">
+          <p>{{bubble-three-text}}</p>
         </div>
         <div class="da-bubble-4">
-          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble_four_image}}.{{bubble_image_ext}}" alt="">
-          <p>{{bubble_four}}</p>
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble-four-image}}.{{bubble-image-extension}}" alt="">
+          <p>{{bubble-four-text}}</p>
         </div>
       </div>
     </div>
     <div class="pw-row da-footer da-print">
       <div class="pw-text bottom">
-        <span data-break="{{print_delivery_break}}">{{print_delivery_text}}</span>
+        <span data-break="{{print-delivery-line-break}}">{{print-delivery-text}}</span>
       </div>
       <div class="da-print-link">
-        <a href="{{print_delivery_url}}" target="_blank" class="pw-btn small print-link">{{print_delivery_cta}}</a>
+        <a href="{{print-delivery-url}}" target="_blank" class="pw-btn small print-link">{{print-delivery-cta}}</a>
       </div>
     </div>
     <div class="da-legal">
