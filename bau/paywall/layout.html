@@ -65,7 +65,7 @@
 }
 
 .meter-modal .da-print {
-  display: {{show_print}};
+  display: {{show-print}};
 }
 
 .meter-modal .reg-content {
@@ -400,10 +400,10 @@ screen and (max-width: 360px) {
 }
 </style>
 <div id="reg-overlay">
-  <div class="reg-dialog meter-modal" data-variation="{{variation}}" data-market="{{domain}}">
+  <div class="reg-dialog meter-modal" data-market="{{market-domain}}">
     <div class="pw-row da-head">
       <div class="pw-text">
-        <span class="da-progress" data-break="{{progress_break}}">{{progress}}</span>
+        <span class="da-progress" data-break="{{progress_break}}">{{progress-text}}</span>
       </div>
       <div class="da-login-link">
         <a class="pw-btn small" data-reg-handler="signInHandler" href="#">Subscriber Login</a>
@@ -417,37 +417,37 @@ screen and (max-width: 360px) {
       <h4 class="da-urgency">{{urgency}}</h4>
       <div class="da-offer">
         <div class="da-image pull-left">
-          <img class="da-device-image" src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/device-uda.{{image_ext}}" alt="" style="width: 163px;">
-          <p>{{uda_caption}}</p>
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/device-uda.{{image_ext}}" alt="" style="width: 163px;">
+          <p>{{uda-caption}}</p>
         </div>
         <div class="da-details pull-right">
           <h3>{{offer}}</h3>
           <div class="da-cta-div ">
-            <a class="da-digital-button pw-btn lrg" href="{{subscribeUrl}}" data-met-return="">{{cta}}</a>
+            <a class="da-digital-button pw-btn lrg" href="{{subscribeUrl}}" data-met-return="">{{cta-button-text}}</a>
           </div>
-          <span class="fine-print">{{fine_print}}</span>
+          <span class="fine-print">{{fine-print}}</span>
         </div>
       </div>
       <div class="toggle" style="display:none;">
         <p>See what's included</p>
-        <img src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/arrow.svg" alt="">
+        <img src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/arrow.svg" alt="">
       </div>
       <div class="access-list">
         <span>{{bubble_header}}</span>
         <div class="da-bubble-1">
-          <img class="da-device-image" src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/icon-{{bubble_one_image}}.{{bubble_image_ext}}" alt="">
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble_one_image}}.{{bubble_image_ext}}" alt="">
           <p>{{bubble_one}}</p>
         </div>
         <div class="da-bubble-2">
-          <img class="da-device-image" src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/icon-{{bubble_two_image}}.{{bubble_image_ext}}" alt="">
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble_two_image}}.{{bubble_image_ext}}" alt="">
           <p>{{bubble_two}}</p>
         </div>
         <div class="da-bubble-3">
-          <img class="da-device-image" src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/icon-{{bubble_three_image}}.{{bubble_image_ext}}" alt="">
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble_three_image}}.{{bubble_image_ext}}" alt="">
           <p>{{bubble_three}}</p>
         </div>
         <div class="da-bubble-4">
-          <img class="da-device-image" src="//www.{{domain}}.com/subscriptions/modal-{{campaign}}/img/icon-{{bubble_four_image}}.{{bubble_image_ext}}" alt="">
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble_four_image}}.{{bubble_image_ext}}" alt="">
           <p>{{bubble_four}}</p>
         </div>
       </div>
@@ -461,7 +461,7 @@ screen and (max-width: 360px) {
       </div>
     </div>
     <div class="da-legal">
-      <a class="reg-cancel abandon" href="https://www.{{domain}}.com">{{abandon}}</a> | <a href="https://www.tribpub.com/central-terms-of-service/" target="_blank">Terms of Service</a> | <a href="https://www.tribpub.com/privacy-policy/" target="_blank">Privacy Policy</a>
+      <a class="reg-cancel abandon" href="https://www.{{market-domain}}.com">{{abandon}}</a> | <a href="https://www.tribpub.com/central-terms-of-service/" target="_blank">Terms of Service</a> | <a href="https://www.tribpub.com/privacy-policy/" target="_blank">Privacy Policy</a>
     </div>
   </div>
   <script>
