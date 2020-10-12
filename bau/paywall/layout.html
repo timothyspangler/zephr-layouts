@@ -1,4 +1,9 @@
 <style>
+.reg-dialog * {
+  box-sizing:inherit;
+  font-inherit;
+}
+
 #reg-overlay {
   background: rgba(0,0,0,.5);
   height: 100%;
@@ -395,7 +400,7 @@ screen and (max-width: 360px) {
 }
 </style>
 <div id="reg-overlay">
-  <div class="meter-modal" data-variation="{{variation}}" data-market="{{domain}}">
+  <div class="reg-dialog meter-modal" data-variation="{{variation}}" data-market="{{domain}}">
     <div class="pw-row da-head">
       <div class="pw-text">
         <span class="da-progress" data-break="{{progress_break}}">{{progress}}</span>
