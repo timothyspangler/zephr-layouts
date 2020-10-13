@@ -227,7 +227,7 @@
 }
 
 .da-progress {
-  line-height: {{progress-line-height-desktop} !important;
+  line-height: {{progress-line-height-desktop}} !important;
 }
 
 .pw-text.bottom span { /* print text */
@@ -465,7 +465,7 @@ screen and (max-width: 360px) {
     </div>
   </div>
   <script>
-  ((window.trb || (trb = {})).metering || (trb.metering = {})).push(function(reg) {
+    //  Add linebreaks for mobile
     var break_code = '<br class="m_show" style="display:none;">';
     document.querySelectorAll('.meter-modal [data-break]').forEach(function(elem) {
       //  insert `break_code` after `data-break`
@@ -473,6 +473,5 @@ screen and (max-width: 360px) {
       if(b != '')
         elem.innerHTML = elem.innerHTML.replace(new RegExp(b, 'ig'), b + break_code);
     });
-  });
   </script>
 </div>
