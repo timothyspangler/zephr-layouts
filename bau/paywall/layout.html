@@ -1,0 +1,477 @@
+<style>
+.reg-dialog * {
+  box-sizing:inherit;
+  font:inherit;
+}
+
+#reg-overlay {
+  background: rgba(0,0,0,.5);
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 2147483642;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block!important;
+  contain: strict;
+}
+
+#reg-overlay:after {
+  content: "";
+  height: 100%;
+}
+
+#reg-overlay:after, .reg-dialog {
+  display: inline-block;
+  vertical-align: middle;  
+}
+
+#reg-overlay, .panel .reg-explain, .panel .reg-register, .panel .reg-sso, .panel .reg-tos {
+  text-align:center;
+}
+
+/* TEMPORARY - hide close button */
+.meter-modal .reg-close {
+  display: none;
+}
+
+.meter-modal mark {
+  background-color: {{highlight-background-color}};
+  text-decoration: line-through;
+  color: {{highlight-color}};
+}
+
+.reg-cancel,
+.reg-dialog a {
+  color: #fff;
+}
+
+.meter-modal {
+  width: 718px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px #666;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+  
+.meter-modal[data-variation="B"] .da-bubble-4 {
+  display:none;  
+}
+
+.meter-modal h2,
+.meter-modal h3 {
+  letter-spacing: normal;
+}
+
+.meter-modal .da-print {
+  display: {{show-print}};
+}
+
+.meter-modal .reg-content {
+  padding: 0 !important;
+}
+
+.meter-modal span {
+  font-size: 12.5px;
+  text-transform: uppercase;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pw-row {
+  display: block;
+  padding: 10px 22px;
+  margin: 0 auto;
+  background-color: #39a0c5;
+  text-align: left;
+}
+
+.da-body {
+  display: block;
+  background-color: #fff;
+  height: auto !important;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  padding: 15px 0px 0px;
+  clear: both;
+
+}
+
+.da-offer {
+  display: inline-block;
+  width: 535px;
+  text-align: center;
+  margin: 40px auto 40px;
+}
+
+.da-image p {
+  color: #666;
+  font-size: 17px;
+  font-weight: 900;
+  margin: 8px 0 0;
+}
+
+.da-details h3 {  /* offer text */
+  color: {{offer-color}};
+  font-size: 20px;
+  font-weight: 900;
+  margin: 14px 0 10px;
+  text-transform: uppercase;
+}
+
+.da-details h3 s {
+  color: {{strikethrough-color}};
+}
+
+.fine-print {
+  color: {{fine-print-color}};
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.da-cta-div {
+  margin: 0 0 8px;
+}
+
+.access-list {
+  display: block;
+  clear: both;
+}
+
+.access-list span { /* text above bubbles */
+  color: {{bubble-header-color}};
+  width: 100%;
+  display: block;
+
+}
+
+.access-list>div {
+  display: inline-block;
+  margin: 20px 18px 24px;
+}
+
+.access-list>div:last-child {
+  margin-left: 10px;
+}
+
+.access-list img {
+  width: 65px;
+  height: 65px;
+  border: 0;
+}
+
+.access-list>div p, .access-list>div p span { /* bubble text */
+  font-size: 11px;
+  line-height: 13px;
+  text-transform: uppercase;
+  margin: 2px 0 0;
+  color: {{bubble-text-color}};
+}
+
+
+.da-digital-button {
+  color: {{cta-text-color}};
+  background-color: {{cta-background-color}};
+}
+
+.da-head {
+  background-color: {{header-background-color}};
+}
+
+.pw-btn {
+  padding: 15px 0;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 100px;
+}
+
+.pw-btn.lrg {
+  min-width: 255px;
+}
+
+.pw-btn.small {
+  font-size: 12.5px;
+  padding: 10px 0;
+  color: {{button-text-color}};
+  background-color: {{button-background-color}};
+  min-width: 168px;
+}
+
+.pw-btn.small.print-link {
+  color:{{print-button-text-color}};
+}
+
+.pw-row>div {
+  display: inline-block
+}
+
+.pw-row span {
+  line-height:35px;
+  color: {{header-text-color}};
+  font-weight: bold;
+}
+
+.da-progress {
+  line-height: {{progress-line-height-desktop}} !important;
+}
+
+.pw-text.bottom span { /* print text */
+  color: {{print-text-color}};
+}
+
+.pw-row.da-footer { /* print footer */
+  background-color: {{print-background-color}};
+}
+
+.da-login-link, .da-logout-link, .da-print-link {
+  float: right;
+}
+
+.da-body h2 { /* tagline */
+  font-size: 26px;
+  letter-spacing:-0.5px;
+  font-weight: bold;
+  color: {{tagline-color}};
+  margin: 14px 0px 10px 0px;
+}
+
+.da-urgency { /* urgency */
+  color: {{urgency-color}};
+  font-size: 12px;
+  font-weight: 900;
+  margin:0;
+  text-align:center;
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
+
+.da-legal {
+  background-color: {{footer-background-color}};
+  text-align: center;
+  color: {{footer-text-color}};
+  font-size: 11px;
+  padding: 18px 0;
+}
+
+.da-legal a {
+  display: inline-block;
+  color: {{footer-text-color}};
+  text-decoration: none;
+  margin: 0 3px;
+}
+
+[data-reg-loggedin] .da-login-link {
+  visibility: hidden;
+}
+  
+.da-logout-link {
+  visibility: hidden;
+}
+
+[data-reg-loggedin] .da-logout-link {
+  visibility: visible;
+}
+
+@media screen and (max-width: 980px) {}
+
+@media screen and (max-width: 767px) {}
+
+@media only screen and (max-device-width:480px),
+screen and (max-width: 480px) {
+
+  .meter-modal {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .pw-btn.small {
+    padding: 8px 0;
+    min-width: 148px;
+    font-size: 12px;
+  }
+
+  .pw-row {
+    padding: 12px 18px 13px 18px;
+  }
+
+  .pw-row span {
+    line-height:16px;
+    display: block;
+    font-size: 12px;
+  }
+
+  .da-progress {
+    line-height: {{progress-line-height-mobile}} !important;
+  }
+
+  .da-body h2 {
+    font-size: 24px;
+    margin-top:0px;
+  }
+
+  .da-offer {
+    width: auto;
+  }
+
+  .da-image,
+  .da-details {
+    float: none;
+  }
+
+  .access-list {
+    max-width: 280px;
+    margin: 50px auto;
+  }
+
+  .meter-modal .access-list>div {
+    /*  break the bubbles into two lines */
+    width:37%;
+  }
+
+  .access-list>div:last-child {
+    margin-left: 0;
+  }
+
+  .toggle p {
+    color: #666;
+    font-style: italic;
+    font-size: 14px;
+    margin: 0 0 6px;
+  }
+
+  .toggle img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .pw-btn.lrg {
+    min-width: 250px;
+  }
+
+  .da-details h3,
+  .da-details span {
+    letter-spacing: .5px;
+  }
+
+  .m_show,
+  .toggle {
+    display: block !important;
+  }
+
+}
+
+@media only screen and (max-device-width:360px),
+screen and (max-width: 360px) {
+  .pw-row {}
+
+  .pw-row span {
+    line-height:12px;
+    font-size: 10px;
+  }
+
+  .da-progress {
+    line-height: {{progress-line-height-tiny}} !important;
+  }
+
+  .pw-btn.small {
+    padding: 6px 0;
+    font-size: 10px;
+    min-width: 120px;
+  }
+
+  .da-body h2 {
+    font-size: 20px;
+  }
+}
+</style>
+<div id="reg-overlay">
+  <div class="reg-dialog meter-modal" data-market="{{market-domain}}">
+    <div class="pw-row da-head">
+      <div class="pw-text">
+        <span class="da-progress" data-break="{{progress-line-break}}">{{progress-text}}</span>
+      </div>
+      <div class="da-login-link">
+        <a class="pw-btn small" data-reg-handler="signInHandler" href="#">Subscriber Login</a>
+      </div>
+      <div class="da-logout-link">
+        <a class="pw-btn small" data-reg-handler="logoutin" href="#">Log Out</a>
+      </div>
+    </div>
+    <div class="da-body">
+      <h2 data-break="{{tagline-break}}">{{tagline}}</h2>
+      <h4 class="da-urgency">{{urgency}}</h4>
+      <div class="da-offer">
+        <div class="da-image pull-left">
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/device-uda.{{image-extension}}" alt="" style="width: 163px;">
+          <p>{{uda-caption}}</p>
+        </div>
+        <div class="da-details pull-right">
+          <h3>{{offer}}</h3>
+          <div class="da-cta-div ">
+            <a class="da-digital-button pw-btn lrg" href="{{subscribe-url}}" data-met-return="">{{cta-button-text}}</a>
+          </div>
+          <span class="fine-print">{{fine-print}}</span>
+        </div>
+      </div>
+      <div class="toggle" style="display:none;">
+        <p>{{bubble-header-text}}</p>
+        <img src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/arrow.svg" alt="">
+      </div>
+      <div class="access-list">
+        <span>{{bubble-header}}</span>
+        <div class="da-bubble-1">
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble-one-image}}.{{bubble-image-extension}}" alt="">
+          <p>{{bubble-one-text}}</p>
+        </div>
+        <div class="da-bubble-2">
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble-two-image}}.{{bubble-image-extension}}" alt="">
+          <p>{{bubble-two-text}}</p>
+        </div>
+        <div class="da-bubble-3">
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble-three-image}}.{{bubble-image-extension}}" alt="">
+          <p>{{bubble-three-text}}</p>
+        </div>
+        <div class="da-bubble-4">
+          <img class="da-device-image" src="//www.{{market-domain}}.com/subscriptions/modal-{{campaign-code}}/img/icon-{{bubble-four-image}}.{{bubble-image-extension}}" alt="">
+          <p>{{bubble-four-text}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="pw-row da-footer da-print">
+      <div class="pw-text bottom">
+        <span data-break="{{print-delivery-line-break}}">{{print-delivery-text}}</span>
+      </div>
+      <div class="da-print-link">
+        <a href="{{print-delivery-url}}" target="_blank" class="pw-btn small print-link">{{print-delivery-cta}}</a>
+      </div>
+    </div>
+    <div class="da-legal">
+      <a class="reg-cancel abandon" href="https://www.{{market-domain}}.com">{{abandon-text}}</a> | <a href="https://www.tribpub.com/central-terms-of-service/" target="_blank">Terms of Service</a> | <a href="https://www.tribpub.com/privacy-policy/" target="_blank">Privacy Policy</a>
+    </div>
+  </div>
+  <script>
+    //  Add linebreaks for mobile
+    var break_code = '<br class="m_show" style="display:none;">';
+    document.querySelectorAll('.meter-modal [data-break]').forEach(function(elem) {
+      //  insert `break_code` after `data-break`
+      var b = elem.getAttribute('data-break');
+      if(b != '')
+        elem.innerHTML = elem.innerHTML.replace(new RegExp(b, 'ig'), b + break_code);
+    });
+  </script>
+</div>
